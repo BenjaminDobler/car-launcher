@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -47,7 +48,7 @@ class MenuScreenFragment(): Fragment() {
 
         val listView: RecyclerView = v.findViewById(R.id.list_view);
         listView.apply {
-            layoutManager = LinearLayoutManager(this.context)
+            layoutManager = GridLayoutManager(this.context, 3)
             adapter = AppListAdapter(apps)
         }
 
